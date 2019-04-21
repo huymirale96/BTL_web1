@@ -12,7 +12,6 @@ namespace BTL_web1
         protected void Page_Load(object sender, EventArgs e)
         {
            // dst.Text = Session["danhSachCacTrang"].ToString();   <p> <asp:Label ID="dst" runat="server"></asp:Label></p>
-            </ div >
         }
     }
 }

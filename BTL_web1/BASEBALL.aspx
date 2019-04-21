@@ -1,0 +1,31 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="BASEBALL.aspx.cs" Inherits="BTL_web1.ROSWEATER" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+   <div class="anhsp">
+    <img src="img/DU18F7271F08_S_1.jpg" class="img-responsive" />
+  
+       </div>
+
+
+    <div class="thongtin">
+        
+                                            <p class="tieude" style=" text-align:center;">DRKSHDW</p>
+                                            <span style="font-style:italic">  <p>DRKSHDW FW18 SISYPHUS BASEBALL TEE IN PEARL  HEAVYWEIGHT COTTON JERSEY FEATURES A BELOW-THE-HIP LENGTH, A CREW NECKLINE, DIAGONAL STITCHING DETAILS ON THE SHOULDERS AND RIBBED CUFFS.
+THIS HEAVYWEIGHT SWEATSHIRT JERSEY HAS A BRUSHED UNDERSIDE.
+THIS IS A CORE MATERIAL FOR THE RICK OWENS CLOTHING COLLECTION.</p>
+<p>* COLOR: PEARL BEIGE.</p>
+<p>* MATERIAL: 100% YAK.</p>
+<p>* MODEL IS WEARING SIZE: S.</p>
+<p>* MODEL IS 189 CM TALL</p></span>
+                                            <p style="font-size:25px;"><strong>8.000.000 (VNĐ)</strong></p>
+          &nbsp;<br /><br /><br /><br /><br /><br /><br /><br /><br />
+             
+        <p>SELECT SIZE</p><br />
+        <button>XS</button>&nbsp;&nbsp;&nbsp;&nbsp<button>S</button>&nbsp;&nbsp;&nbsp;&nbsp<button>L</button>&nbsp;&nbsp;&nbsp;&nbsp<button>XL</button>
+                                   <br /><br /><br />      
+					&nbsp;&nbsp;&nbsp;&nbsp<button>AND TO SHOPPING BAG</button>			
+								        <br />
+        <br />
+                                          
+									
+								        </div>	
+</asp:Content>

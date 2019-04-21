@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="BTL_web1.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <link href="StyleSheet2.css" rel="stylesheet" />
+    <style type="css/text">
+        .content-right1 {
+      float: right;
+    width: 845px;
+    height: 1828px;
+    margin-left: 280px;
+    margin-top: 0px;
+}
+        
+       
+    </style>
+    
+</head>
+<body>
+   
+    
+			<div class="header">
+           <img src="img/28471228_154438908604178_7929223120495056797_n.jpg" />
+            
+		</div>
+        
+        
+	
+				<!-- end row welcome -->
+				
+	    <div id="banner">
+                        <img src="img/Untitled5.jpg" />
+            <button onclick="ktra()">Try it</button>
+					</div>
+			
+				<!-- end banner -->
+				
+		<div class="nav">
+						<ul>
+							<li><a href="TrangChu.aspx" title="">HOME</a></li>
+							<li><a title="">SHOP</a>
+                                 <ul class="sub-menu">
+                                    <li><a href="Jacket.aspx">Jacket</a></li>
+                                    <li><a href="Shirts.aspx">Shirts</a></li>
+                                    <li><a href="HDandSW.aspx">Hoodie And Sweater</a></li>
+                                     <li><a href="Pants.aspx">Pants</a></li>
+                                 </ul>
+							</li>
+							<li><a href="#" title="">ACCESSORIES</a>
+                                <ul class="sub-menu">
+                                    <li><a href="Rings.aspx">RINGS</a></li>
+                                    <li><a href="Bags.aspx">BAGS</a></li>
+                                    
+                                    
+                                 </ul>
+							</li>
+							<li><a href="Shoes.aspx" title="">SHOES</a></li>
+							<li><a href="Contact.aspx" title="">CONTACT</a></li>
+                           <li> <a href="Login.aspx" title="">LOGIN</a></li>
+                            
+						</ul>			
+		</div>
+      
+       
+				
+				<!-- end menu -->
+       
+
+		 <div class="content">
+        <div class="content-left">
+            <div class="tintuc">
+                            <img src="img/15940562_1045356835591312_8175601803379721452_n%20(1).jpg" />
+							<p  ><a style="color:black" href="#" title="">SALE OFF 30% ALL ITEM</a></p>
+						</div>
+
+            <div class="tintuc">
+                            <img src="img/44028248_1950806744985473_160650073431080960_n.jpg" />
+							<p><a style="color:black" href="#" title="">NEW SEASON WINTER 2018</a></p>
+						</div>
+            <br />
+            
+        </div>
+
+				
+				<!-- end side bar left -->
+                
+              <div class="content-right1">
+                  <form id="form1" runat="server">
+                  
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                  </asp:ContentPlaceHolder>
+               </form>
+                  
+             </div>
+        <div class="footer">
+       
+       <p> &copy; DESIGN<br />
+        FITHOU</p>
+    </div>
+    
+     
+        
+	
+		
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <script type="text/javascript" src="JavaScript.js"></script>
+         
+    
+</body>
+</html>

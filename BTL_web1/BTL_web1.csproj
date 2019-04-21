@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA5A95F7-E151-4B41-8AC4-F71962497C7B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BTL_web1</RootNamespace>
+    <AssemblyName>BTL_web1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ASTAIREPODS.aspx" />
+    <Content Include="Bags.aspx" />
+    <Content Include="BASEBALL.aspx" />
+    <Content Include="BASEBALLBLACK.aspx" />
+    <Content Include="CHCEMETERY.aspx" />
+    <Content Include="CHCEMETERYG.aspx" />
+    <Content Include="CHCROSS.aspx" />
+    <Content Include="CHDAGGER.aspx" />
+    <Content Include="CHKEEPER.aspx" />
+    <Content Include="CHSTAR.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="CROPCARGOS.aspx" />
+    <Content Include="CROPPANTS.aspx" />
+    <Content Include="CUTJEANS.aspx" />
+    <Content Include="DangKy.aspx" />
+    <Content Include="DangNhap.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HDandSW.aspx" />
+    <Content Include="HIGHSNEAKERS.aspx" />
+    <Content Include="img\Shirts.aspx" />
+    <Content Include="Jacket.aspx" />
+    <Content Include="JavaScript.js" />
+    <Content Include="JUMBOTEEB.aspx" />
+    <Content Include="JUMBOTEEB2.aspx" />
+    <Content Include="JUMBOTEEW.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="LONGPANTS.aspx" />
+    <Content Include="LOWSNEAKERS.aspx" />
+    <Content Include="LOWSNEAKERSB.aspx" />
+    <Content Include="MOUNTAINHD.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MasterPage.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PANTS.aspx" />
+    <Content Include="PODSDENIM.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="Rings.aspx" />
+    <Content Include="ROBABBYBAG.aspx" />
+    <Content Include="ROBACKPACK.aspx" />
+    <Content Include="ROBACKPACK2.aspx" />
+    <Content Include="ROBIKER.aspx" />
+    <Content Include="ROBLAZER.aspx" />
+    <Content Include="ROCOAT.aspx" />
+    <Content Include="RODENIM.aspx" />
+    <Content Include="RODUFFLEBP.aspx" />
+    <Content Include="RODUFFLEBP2.aspx" />
+    <Content Include="ROGEOBASKET.aspx" />
+    <Content Include="ROHOODED.aspx" />
+    <Content Include="ROMEGA.aspx" />
+    <Content Include="ROMICROBAG.aspx" />
+    <Content Include="ROSHIRTS.aspx" />
+    <Content Include="ROSOCK.aspx" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Shirts.aspx" />
+    <Content Include="Shoes.aspx" />
+    <Content Include="SLJUMBOB.aspx" />
+    <Content Include="SLJUMBOW.aspx" />
+    <Content Include="SPAROBE.aspx" />
+    <Content Include="StyleSheet1.css" />
+    <Content Include="StyleSheet2.css" />
+    <Content Include="TaiKhoan.aspx" />
+    <Content Include="Test_a_a.aspx" />
+    <Content Include="TrangChu.aspx" />
+    <Content Include="VEGANHIGH.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ASTAIREPODS.aspx.cs">
+      <DependentUpon>ASTAIREPODS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASTAIREPODS.aspx.designer.cs">
+      <DependentUpon>ASTAIREPODS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bags.aspx.cs">
+      <DependentUpon>Bags.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bags.aspx.designer.cs">
+      <DependentUpon>Bags.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BASEBALL.aspx.cs">
+      <DependentUpon>BASEBALL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BASEBALL.aspx.designer.cs">
+      <DependentUpon>BASEBALL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BASEBALLBLACK.aspx.cs">
+      <DependentUpon>BASEBALLBLACK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BASEBALLBLACK.aspx.designer.cs">
+      <DependentUpon>BASEBALLBLACK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CHCEMETERY.aspx.cs">
+      <DependentUpon>CHCEMETERY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CHCEMETERY.aspx.designer.cs">
+      <DependentUpon>CHCEMETERY.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CHCEMETERYG.aspx.cs">
+      <DependentUpon>CHCEMETERYG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CHCEMETERYG.aspx.designer.cs">
+      <DependentUpon>CHCEMETERYG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CHCROSS.aspx.cs">
+      <DependentUpon>CHCROSS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CHCROSS.aspx.designer.cs">
+      <DependentUpon>CHCROSS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CHDAGGER.aspx.cs">
+      <DependentUpon>CHDAGGER.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CHDAGGER.aspx.designer.cs">
+      <DependentUpon>CHDAGGER.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CHKEEPER.aspx.cs">
+      <DependentUpon>CHKEEPER.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CHKEEPER.aspx.designer.cs">
+      <DependentUpon>CHKEEPER.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CHSTAR.aspx.cs">
+      <DependentUpon>CHSTAR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CHSTAR.aspx.designer.cs">
+      <DependentUpon>CHSTAR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CROPCARGOS.aspx.cs">
+      <DependentUpon>CROPCARGOS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CROPCARGOS.aspx.designer.cs">
+      <DependentUpon>CROPCARGOS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CROPPANTS.aspx.cs">
+      <DependentUpon>CROPPANTS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CROPPANTS.aspx.designer.cs">
+      <DependentUpon>CROPPANTS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CUTJEANS.aspx.cs">
+      <DependentUpon>CUTJEANS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CUTJEANS.aspx.designer.cs">
+      <DependentUpon>CUTJEANS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DangKy.aspx.cs">
+      <DependentUpon>DangKy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangKy.aspx.designer.cs">
+      <DependentUpon>DangKy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhap.aspx.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangNhap.aspx.designer.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HDandSW.aspx.cs">
+      <DependentUpon>HDandSW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HDandSW.aspx.designer.cs">
+      <DependentUpon>HDandSW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HIGHSNEAKERS.aspx.cs">
+      <DependentUpon>HIGHSNEAKERS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HIGHSNEAKERS.aspx.designer.cs">
+      <DependentUpon>HIGHSNEAKERS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="img\Shirts.aspx.cs">
+      <DependentUpon>Shirts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="img\Shirts.aspx.designer.cs">
+      <DependentUpon>Shirts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Jacket.aspx.cs">
+      <DependentUpon>Jacket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Jacket.aspx.designer.cs">
+      <DependentUpon>Jacket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JUMBOTEEB.aspx.cs">
+      <DependentUpon>JUMBOTEEB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JUMBOTEEB.aspx.designer.cs">
+      <DependentUpon>JUMBOTEEB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JUMBOTEEB2.aspx.cs">
+      <DependentUpon>JUMBOTEEB2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JUMBOTEEB2.aspx.designer.cs">
+      <DependentUpon>JUMBOTEEB2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JUMBOTEEW.aspx.cs">
+      <DependentUpon>JUMBOTEEW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JUMBOTEEW.aspx.designer.cs">
+      <DependentUpon>JUMBOTEEW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LONGPANTS.aspx.cs">
+      <DependentUpon>LONGPANTS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LONGPANTS.aspx.designer.cs">
+      <DependentUpon>LONGPANTS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LOWSNEAKERS.aspx.cs">
+      <DependentUpon>LOWSNEAKERS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LOWSNEAKERS.aspx.designer.cs">
+      <DependentUpon>LOWSNEAKERS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LOWSNEAKERSB.aspx.cs">
+      <DependentUpon>LOWSNEAKERSB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LOWSNEAKERSB.aspx.designer.cs">
+      <DependentUpon>LOWSNEAKERSB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MOUNTAINHD.aspx.cs">
+      <DependentUpon>MOUNTAINHD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MOUNTAINHD.aspx.designer.cs">
+      <DependentUpon>MOUNTAINHD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PANTS.aspx.cs">
+      <DependentUpon>PANTS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PANTS.aspx.designer.cs">
+      <DependentUpon>PANTS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PODSDENIM.aspx.cs">
+      <DependentUpon>PODSDENIM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PODSDENIM.aspx.designer.cs">
+      <DependentUpon>PODSDENIM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rings.aspx.cs">
+      <DependentUpon>Rings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rings.aspx.designer.cs">
+      <DependentUpon>Rings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ROBABBYBAG.aspx.cs">
+      <DependentUpon>ROBABBYBAG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ROBABBYBAG.aspx.designer.cs">
+      <DependentUpon>ROBABBYBAG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ROBACKPACK.aspx.cs">
+      <DependentUpon>ROBACKPACK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ROBACKPACK.aspx.designer.cs">
+      <DependentUpon>ROBACKPACK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ROBACKPACK2.aspx.cs">
+      <DependentUpon>ROBACKPACK2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ROBACKPACK2.aspx.designer.cs">
+      <DependentUpon>ROBACKPACK2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ROBIKER.aspx.cs">
+      <DependentUpon>ROBIKER.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ROBIKER.aspx.designer.cs">
+      <DependentUpon>ROBIKER.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ROBLAZER.aspx.cs">
+      <DependentUpon>ROBLAZER.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ROBLAZER.aspx.designer.cs">
+      <DependentUpon>ROBLAZER.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ROCOAT.aspx.cs">
+      <DependentUpon>ROCOAT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ROCOAT.aspx.designer.cs">
+      <DependentUpon>ROCOAT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RODENIM.aspx.cs">
+      <DependentUpon>RODENIM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RODENIM.aspx.designer.cs">
+      <DependentUpon>RODENIM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RODUFFLEBP.aspx.cs">
+      <DependentUpon>RODUFFLEBP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RODUFFLEBP.aspx.designer.cs">
+      <DependentUpon>RODUFFLEBP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RODUFFLEBP2.aspx.cs">
+      <DependentUpon>RODUFFLEBP2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RODUFFLEBP2.aspx.designer.cs">
+      <DependentUpon>RODUFFLEBP2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ROGEOBASKET.aspx.cs">
+      <DependentUpon>ROGEOBASKET.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ROGEOBASKET.aspx.designer.cs">
+      <DependentUpon>ROGEOBASKET.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ROHOODED.aspx.cs">
+      <DependentUpon>ROHOODED.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ROHOODED.aspx.designer.cs">
+      <DependentUpon>ROHOODED.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ROMEGA.aspx.cs">
+      <DependentUpon>ROMEGA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ROMEGA.aspx.designer.cs">
+      <DependentUpon>ROMEGA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ROMICROBAG.aspx.cs">
+      <DependentUpon>ROMICROBAG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ROMICROBAG.aspx.designer.cs">
+      <DependentUpon>ROMICROBAG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ROSHIRTS.aspx.cs">
+      <DependentUpon>ROSHIRTS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ROSHIRTS.aspx.designer.cs">
+      <DependentUpon>ROSHIRTS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ROSOCK.aspx.cs">
+      <DependentUpon>ROSOCK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ROSOCK.aspx.designer.cs">
+      <DependentUpon>ROSOCK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shirts.aspx.cs">
+      <DependentUpon>Shirts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shirts.aspx.designer.cs">
+      <DependentUpon>Shirts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shoes.aspx.cs">
+      <DependentUpon>Shoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shoes.aspx.designer.cs">
+      <DependentUpon>Shoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SLJUMBOB.aspx.cs">
+      <DependentUpon>SLJUMBOB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SLJUMBOB.aspx.designer.cs">
+      <DependentUpon>SLJUMBOB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SLJUMBOW.aspx.cs">
+      <DependentUpon>SLJUMBOW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SLJUMBOW.aspx.designer.cs">
+      <DependentUpon>SLJUMBOW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SPAROBE.aspx.cs">
+      <DependentUpon>SPAROBE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SPAROBE.aspx.designer.cs">
+      <DependentUpon>SPAROBE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoan.aspx.cs">
+      <DependentUpon>TaiKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TaiKhoan.aspx.designer.cs">
+      <DependentUpon>TaiKhoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoan.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ten.cs" />
+    <Compile Include="Test_a_a.aspx.cs">
+      <DependentUpon>Test_a_a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test_a_a.aspx.designer.cs">
+      <DependentUpon>Test_a_a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.aspx.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrangChu.aspx.designer.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VEGANHIGH.aspx.cs">
+      <DependentUpon>VEGANHIGH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VEGANHIGH.aspx.designer.cs">
+      <DependentUpon>VEGANHIGH.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57646</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57646/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -4,6 +4,7 @@
     <h1>Các thành viên</h1>
     <ol>
         <li>NGUYỄN QUỐC BẢO - 16A03</li>
+        <li>16A03</li>
     </ol>
        </div>
 </asp:Content>
